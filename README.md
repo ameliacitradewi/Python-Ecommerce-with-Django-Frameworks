@@ -3,9 +3,11 @@
 This project is an eCommerce website built with Django, utilizing a Bootstrap template for the front-end design. It includes features such as user authentication (login/logout), product details, pagination, and a checkout process with PayPal Sandbox for testing purposes.
 
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/Home.png)
-![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/FAQs.png)
-![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/Contact%20with%20responsive%20gmaps.png)
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/Additional%20info%20%26%20reviews.png)
+![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/Contact%20with%20responsive%20gmaps.png)
+![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/Order%20Summary.png)
+![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/Footer%20with%20responsive%20link.png)
+![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/Product%20detail.png)
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Final%20Project/Shipping%20details.png)
 
 ## Prerequisites
