@@ -5,12 +5,12 @@ This project is an eCommerce website built with Django, utilizing a Bootstrap te
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/1.png)
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/2.png)
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/3.png)
-![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/4.png)
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/5.png)
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/6.png)
-![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/7.png)
-![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/8.png)
 ![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/9.png)
+![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/7.png)
+![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/4.png)
+![alt text](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks/blob/main/Documentation/8.png)
 
 ## Prerequisites
 
