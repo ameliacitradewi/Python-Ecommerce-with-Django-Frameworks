@@ -19,28 +19,28 @@ Before running this project, make sure you have the following prerequisites inst
 - Python (version 3.6 or higher)
 - Django (version 3.2 or higher)
 - PayPal Developer Account (for PayPal Sandbox testing)
-- Bootstrap template (e.g., obtained from https://getbootstrap.com/)
+- Bootstrap MDB and Fashe Colorlib template
 
 ## Installation
 
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/django-ecommerce.git
+git clone https://github.com/ameliacitradewi/django-ecommerce.git](https://github.com/ameliacitradewi/Python-Ecommerce-with-Django-Frameworks.git
 ```
 
 2. Navigate to the project directory:
 
 ```
-cd django-ecommerce
+cd django-ecommerce-project
 ```
 
 3. Create and activate a virtual environment (recommended):
 
 ```
 python3 -m venv env
-source env/bin/activate  # for macOS/Linux
-env\Scripts\activate  # for Windows
+source env_ecomm/bin/activate  # for macOS/Linux
+env_ecomm\Scripts\activate  # for Windows
 ```
 
 4. Install the required dependencies:
