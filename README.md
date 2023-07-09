@@ -1,4 +1,4 @@
-# Django eCommerce with Python and Bootstrap Template
+# Django eCommerce with Python
 
 This project is an eCommerce website built with Django, utilizing a Bootstrap template for the front-end design. It includes features such as user authentication (login/logout), product details, pagination, and a checkout process with PayPal Sandbox for testing purposes.
 
