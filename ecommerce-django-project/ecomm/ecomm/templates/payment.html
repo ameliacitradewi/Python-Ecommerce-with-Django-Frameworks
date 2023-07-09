@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="row justify-content-center">
+      <div class="col pt-5 pb-5">
+        <h1 class="h4"><strong>YOUR TOTAL ORDER : ${{ order.get_total_harga_order|floatformat:2}}</strong></h1>
+        <br />
+        {% if is_paypal %}
+        <div>{{ paypalform.render }}</div>
+        {% else %}
+        <div>Payment via Strip has not activate yet. Please choose another payment method.</div>
+        <p></p>
+        <a href="{% url 'toko:payment' 'paypal' %}">
+          <img src="https://www.heartforkids.org/wp-content/uploads/2021/04/paypal-logo-small.png" width="250px"> 
+          
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

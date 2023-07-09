@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-4 mb-4">
+            <h1 class="text-center">Order Summary</h1>
+        </div>
+    </div>
+    <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+        <tr>
+            <th>NO</th>
+            <th>PRODUCT NAME</th>
+            <th>PRICE</th>
+            <th>QUANTITY</th>
+            <th>TOTAL</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for pItem in keranjang.produk_items.all %}
+            <tr>
+                <td scope="row">
+                    {{ forloop.counter }}
+                </td>
+                <td>
+                    <a href="{% url 'toko:produk-detail' pItem.produk_item.slug %}">
+                        <div class="d-flex align-items-center">
+                            <img
+                                src="{{ pItem.produk_item.gambar.url }}"
+                                alt=""
+                                style="width: 60px; height: 80px"
+                                class="rounded-circle"
+                                />
+                            <div class="ms-3">
+                            <p class="fw-bold mb-1">{{ pItem.produk_item.nama_produk }}</p>
+                            <p class="text-muted mb-0"> {{ pItem.produk_item.deskripsi|truncatewords:15 }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <div>$
+                        {% if pItem.produk_item.harga_diskon %}
+                        {{ pItem.produk_item.harga_diskon }}
+                        {% else %}
+                        {{ pItem.produk_item.harga }}
+                        {% endif %}
+                    </div>
+                </td>
+                <td>{{ pItem.quantity }}</td>
+                <td>                
+                    {% if pItem.produk_item.harga_diskon %}
+                    ${{ pItem.get_total_harga_diskon_item }}
+                    <span class="badge badge-danger rounded-pill d-inline">SAVE ${{ pItem.get_total_hemat_item |floatformat:2 }}</span>
+                    {% else %}
+                    ${{ pItem.get_total_harga_item }}
+                    {% endif %}
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan='5'>Your cart is empty. Let's take a look at our products!</td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                <a class="btn btn-primary float-end" a href="{% url 'toko:home' %}">CONTINUE SHOPPING</a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            {% if keranjang.get_total_harga_order %}
+            <tr>
+                <td colspan="4"><b>TOTAL ORDER</b></td>
+                <td><b>${{ keranjang.get_total_harga_order|floatformat:2}}</b>
+                    {% if keranjang.get_total_hemat_order|floatformat:2 %}
+                    <span class="badge badge-danger">SAVE ${{ keranjang.get_total_hemat_order|floatformat:2}}</span>
+                    {% endif %}
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="5">
+                <a class='btn btn-info float-end ml-2' href="{% url 'toko:checkout' %}">     CHECKOUT    </a>
+                <a class='btn btn-danger' a href="{% url 'toko:home' %}">CONTINUE SHOPPING</a>
+                </td>
+            </tr>
+            {% endif %}
+        </tbody>
+  </table>
+</div>
+{% endblock content %}

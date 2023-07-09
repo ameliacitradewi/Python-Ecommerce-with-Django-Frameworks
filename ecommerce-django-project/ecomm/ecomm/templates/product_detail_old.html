@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--Main layout----------------------------------------------------------------------->
+<main class="mt-5 pt-4">
+    <div class="container mt-5">
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+                <img src="{{ object.gambar.url }}" class="img-fluid" alt="" />
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <!--Content-->
+                <div class="p-4">
+                    <div class="w-size14 p-t-30 respon5">
+                        <h4 class="product-detail-name m-text16 p-b-13">
+                            {{ object.nama_produk }}
+                        </h4>
+                    <div class="mb-3">
+                        <a href="">
+                            <span class="badge bg-dark me-1">{{ object.get_kategori_display }}</span>
+                        </a>
+                        {% if object.label == 'NEW' %}
+                        <a href="">
+                            <span class="badge bg-{{ object.get_label_display }} me-1">New</span>
+                        </a>
+                        {% elif object.label == 'SALE' %}
+                        <a href="">
+                            <span class="badge bg-{{ object.get_label_display }} me-1">Sale</span>
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <span class="badge bg-{{ object.get_label_display }} me-1">Bestseller</span>
+                        </a>
+                        {% endif %}
+                    </div>
+
+                    <p class="lead">
+                        {% if object.harga_diskon %}
+                        <span class="me-1">
+                            <del>${{ object.harga }}</del>
+                        </span>
+                        <span>${{ object.harga_diskon }}</span>
+                        {% else %}
+                        <span>${{ object.harga }}</span>
+                        {% endif %}
+                    </p>
+
+                    <strong><p style="font-size: 20px;">Description</p></strong>
+
+                    <p>{{ object.deskripsi }}</p>
+                    <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary ms-1">
+                        Add to Cart
+                        <i class="fas fa-shopping-cart ms-1"></i>
+                    </a>
+                    <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger ms-1" >
+                        Remove from Cart
+                        <i class="fas fa-shopping-cart ms-1"></i>
+                    </a>
+                </div>
+                <!--Content-->
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+
+        <hr />
+
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-md-6 text-center">
+                <h4 class="my-4 h4">Additional information</h4>
+                <p>Discover our environmentally conscious wine brand, where sustainability meets exceptional taste. We prioritize organic and biodynamic farming, eschewing harmful chemicals for natural methods that preserve soil health and biodiversity. Our water management techniques minimize usage and harness rainwater, while energy-efficient practices and renewable energy sources reduce our carbon footprint. With eco-friendly packaging and responsible waste management, we ensure every aspect of our production aligns with a sustainable future. Certified for our commitment, join us in savoring wines that delight your palate while supporting the planet. Choose our brand for an unforgettable experience that blends the art of winemaking with environmental responsibility. Together, let's toast to a more sustainable world.</p>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <img src="https://images.squarespace-cdn.com/content/v1/5dd5b5e9f226644911c4d733/1580407485249-FHO9LOJIZMQVD9X9H6AN/salcheto-winery-montepulciano.jpg"
+                style="width: 300px; height: 300px" class="rounded-circle"
+                alt="vineyard">
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="https://gustogoddess.com/wp-content/uploads/2023/01/Hand-Squeezing-Grapes.jpg" 
+                style="width: 300px; height: 300px" class="rounded-circle"
+                alt="vineyard">
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="https://images.squarespace-cdn.com/content/v1/58ae0e6c3e00be7a0f66a26b/1658164270174-VJ4NPBPNQ6WGRCIPVY15/IMG_20191101_140942142_HDR.jpg"
+                style="width: 300px; height: 300px" class="rounded-circle"
+                alt="vineyard">
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+</main>
+<!--Main layout-->
+
+
+<!--===============================================================================================-->
+<script type="text/javascript" src="{% static 'fashe/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="{% static 'fashe/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="{% static 'fashe/vendor/bootstrap/js/popper.js' %}"></script>
+    <script type="text/javascript" src="{% static 'fashe/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+    <script type="text/javascript" src="{% static 'fashe/vendor/select2/select2.min.js' %}"></script>
+    <script type="text/javascript">
+        $(".selection-1").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+
+        $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect2')
+        });
+    </script>
+<!--===============================================================================================-->
+    <script src="{% static 'fashe/js/main.js' %}"></script>
+
+{% endblock content%}
